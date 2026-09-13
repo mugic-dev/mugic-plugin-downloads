@@ -21,3 +21,10 @@ Not every build is published here. Versions are released publicly only when they
 are blessed for general use, so the list is deliberately non-consecutive.
 
 Source, issues and development: private repository `mugic-dev/mugic-plugin`.
+
+## Install guides
+
+`guides/<version>/{macos,windows}.html` are rendered from the private repo's
+`docs/{MACOS,WINDOWS}_INSTALL.md` at publish time by `tools/render-guide.py`, so
+users read them as pages instead of downloading a `.md`. They are generated —
+edit the Markdown in the private repo, not the HTML here.

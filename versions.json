@@ -8,7 +8,9 @@
       "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.1.1/MUGIC-MOTION-1.1.1-windows-x64.zip",
       "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.1.1/MUGIC-MOTION-1.1.1-MACOS-README.md",
       "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.1.1/MUGIC-MOTION-1.1.1-WINDOWS-README.md",
-      "notes": "The plug-in's controls are now visible to your DAW, so they can be automated or mapped to a MIDI controller.\n\n- **Reset Orientation**, **Reset Wrap** and **Reset Range Cal** can be mapped to a button or footswitch, per device or for all devices at once — re-centre mid-performance without touching the computer.\n- **MIDI Out** can be switched per device from the DAW, as a per-device mute.\n- The resets are momentary: a button that sends on-press / off-release fires them once per press.\n\nMotion itself (yaw, pitch, roll, energy, jolt) still leaves the plug-in as MIDI CC and pitch bend, exactly as before.\n\nThe macOS installer is signed and notarized by Apple, and universal for Intel and Apple Silicon."
+      "notes": "The plug-in's controls are now visible to your DAW, so they can be automated or mapped to a MIDI controller.\n\n- **Reset Orientation**, **Reset Wrap** and **Reset Range Cal** can be mapped to a button or footswitch, per device or for all devices at once \u2014 re-centre mid-performance without touching the computer.\n- **MIDI Out** can be switched per device from the DAW, as a per-device mute.\n- The resets are momentary: a button that sends on-press / off-release fires them once per press.\n\nMotion itself (yaw, pitch, roll, energy, jolt) still leaves the plug-in as MIDI CC and pitch bend, exactly as before.\n\nThe macOS installer is signed and notarized by Apple, and universal for Intel and Apple Silicon.",
+      "macosGuide": "guides/1.1.1/macos.html",
+      "windowsGuide": "guides/1.1.1/windows.html"
     }
   ]
 }

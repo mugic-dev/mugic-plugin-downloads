@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing MUGIC MOTION 1.1.1 on Windows</title>
+<meta name="description" content="Installing the MUGIC MOTION plugin 1.1.1 on Windows.">
+<style>
+  :root {
+    --bg:#f7f7f5; --card:#ffffff; --fg:#17181c; --muted:#5f6470;
+    --line:#e3e4e8; --accent:#1f6feb; --soft:#f0f1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+      --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+    --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 80px; }
+  .back {
+    display:inline-block; color:var(--muted); text-decoration:none;
+    font-size:0.9rem; margin-bottom:26px;
+  }
+  .back:hover { color:var(--accent); }
+  .doc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:34px; }
+  h1 { font-size:1.7rem; margin:0 0 22px; letter-spacing:-0.02em; line-height:1.25; }
+  h2 { font-size:1.2rem; margin:34px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:1rem; margin:26px 0 10px; }
+  h2:first-of-type { margin-top:24px; }
+  p, li { overflow-wrap:break-word; }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  code { background:var(--soft); padding:2px 6px; border-radius:5px; font-size:0.88em; }
+  pre {
+    background:var(--soft); padding:14px 16px; border-radius:10px;
+    overflow-x:auto; border:1px solid var(--line);
+  }
+  pre code { background:none; padding:0; font-size:0.85rem; line-height:1.5; }
+  blockquote {
+    margin:18px 0; padding:2px 18px; border-left:3px solid var(--accent);
+    color:var(--muted); background:var(--soft); border-radius:0 8px 8px 0;
+  }
+  blockquote p { margin:12px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:0.94rem; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  .tablewrap { overflow-x:auto; }
+  .ver { color:var(--muted); font-size:0.85rem; margin:26px 0 0; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../../">&larr; All downloads</a>
+  <article class="doc">
+    <h1>MUGIC MOTION — Windows Installation</h1>
+    <p><strong>Version 1.1.1 · Windows 10 / 11, 64-bit</strong></p>
+    <p>The Windows download — <strong><code>MUGIC-MOTION-1.1.1-windows-x64.zip</code></strong> — contains two things:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>File</th>
+    <th>What it is</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><code>MUGIC MOTION Plugin.vst3</code></td>
+    <td>The <strong>VST3 plug-in</strong> — use this in Ableton Live, Reaper, Cubase, FL Studio, Bitwig</td>
+    </tr>
+    <tr>
+    <td><code>MUGIC MOTION Plugin.exe</code></td>
+    <td>The <strong>standalone app</strong> — runs on its own, no DAW required</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <blockquote>
+    <p><strong>There is no AU (Audio Unit) version on Windows.</strong> Audio Units are a macOS-only
+    format. On Windows, VST3 is the equivalent. (Logic Pro is macOS-only, so nothing
+    is missing.)</p>
+    </blockquote>
+    <hr />
+    <h2>1. Install the VST3 plug-in</h2>
+    <p>Copy the <strong>whole <code>MUGIC MOTION Plugin.vst3</code> folder</strong> into the system VST3 folder:</p>
+    <pre><code>C:\Program Files\Common Files\VST3
+    </code></pre>
+    <blockquote>
+    <p>⚠️ <code>MUGIC MOTION Plugin.vst3</code> looks like a file but is actually a <strong>folder</strong>.
+    Copy the entire folder — not just the file inside it. If you only copy the
+    inner file, your DAW will not find the plug-in.</p>
+    </blockquote>
+    <p>You'll need administrator rights to write to <code>Program Files</code>. If Windows blocks
+    it, right-click Explorer → <em>Run as administrator</em>, or copy to your user folder
+    instead:</p>
+    <pre><code>%LOCALAPPDATA%\Programs\Common\VST3
+    </code></pre>
+    <p>Then <strong>restart your DAW</strong> and rescan plug-ins if needed:</p>
+    <ul>
+    <li><strong>Ableton Live</strong> — Options → Preferences → Plug-Ins → <em>Rescan</em></li>
+    <li><strong>Reaper</strong> — Options → Preferences → Plug-ins → VST → <em>Re-scan</em></li>
+    <li><strong>Cubase</strong> — Studio → VST Plug-in Manager → <em>Update Plugin Information</em></li>
+    </ul>
+    <h2>2. Or just run the standalone app</h2>
+    <p>Double-click <code>MUGIC MOTION Plugin.exe</code>. No installation needed. You can put it
+    anywhere (Desktop is fine).</p>
+    <hr />
+    <h2>"Windows protected your PC" — this is expected</h2>
+    <p>This build is <strong>not code-signed</strong>, so Microsoft SmartScreen will warn you on
+    first launch. It is not a virus warning — it means we haven't bought a Windows
+    code-signing certificate yet (separate from our Apple one).</p>
+    <p>To run it anyway:</p>
+    <ol>
+    <li>Click <strong>More info</strong></li>
+    <li>Click <strong>Run anyway</strong></li>
+    </ol>
+    <p>You should only have to do this once.</p>
+    <h2>If the window is blank: install WebView2</h2>
+    <p>The MUGIC MOTION interface is drawn with Microsoft Edge WebView2. This ships with
+    Windows 11 and most updated Windows 10 machines — but if the plug-in or app opens
+    to an <strong>empty / white window</strong>, install the free runtime:</p>
+    <p><strong>Microsoft Edge WebView2 Runtime</strong> → <a href="https://developer.microsoft.com/microsoft-edge/webview2/">https://developer.microsoft.com/microsoft-edge/webview2/</a>
+    (choose the <em>Evergreen Standalone Installer</em>, x64)</p>
+    <p>Then restart the app or DAW.</p>
+    <hr />
+    <h2>Connecting your MUGIC device</h2>
+    <ol>
+    <li>Power on the MUGIC and make sure it's on the same Wi-Fi network as the PC.</li>
+    <li>In MUGIC MOTION, check the top-left panel:
+       - <strong>Port</strong> — default <code>4000</code>
+       - <strong>Prefix</strong> — default <code>/mugicdata</code>
+       These must match what the device is configured to send.</li>
+    <li>When data arrives, the YAW / ROLL / PITCH displays start moving and the
+       "Device is not connected" banner disappears.</li>
+    </ol>
+    <blockquote>
+    <p>If nothing moves, the most common causes are: the device is on a different
+    network, another app already holds the port, or the <strong>Prefix</strong> doesn't match
+    the device's configured data prefix. As a quick test, <strong>clear the Prefix
+    field</strong> — an empty prefix accepts data on any address.</p>
+    </blockquote>
+    <h3>Windows Firewall</h3>
+    <p>The first time it runs, Windows may ask whether to allow network access. <strong>Allow
+    it</strong> — the device streams over UDP, and blocking it means no data. If you
+    dismissed that prompt, re-enable it under
+    <em>Windows Security → Firewall &amp; network protection → Allow an app through firewall</em>.</p>
+    <hr />
+    <h2>Calibrating</h2>
+    <p>Click <strong>Calibrate Motion</strong>, pick an axis, and <strong>keep moving that axis back and
+    forth through its full range</strong> until the countdown ends. The app records the
+    minimum and maximum you reach and uses that as the range.</p>
+    <blockquote>
+    <p>Don't just hold a pose — the whole window is recorded, so a still device
+    produces no usable range. (In v1.0.0 calibration worked by holding a position;
+    from v1.0.1 it's a sweep.)</p>
+    </blockquote>
+    <h2>Sending MIDI</h2>
+    <p>Pick a <strong>MIDI param</strong> for each MUGIC parameter, set the <strong>MIDI MODE</strong>
+    (<em>Continuous</em> tracks your motion across the full range; <em>Switch</em> sends on/off
+    when you cross THRESH), then click <strong>ASSIGN</strong>. Once assigned, that button becomes
+    <strong>LEARN</strong> — click it and the plug-in sends <em>only</em> that parameter, so your DAW's
+    MIDI-learn latches the right control.</p>
+    <hr />
+    <h2>Controlling the plug-in from your DAW (new in 1.1.0)</h2>
+    <p>The plug-in's buttons are now also <strong>parameters your DAW can see</strong>, so you can
+    work them from a MIDI controller or an automation lane instead of reaching for
+    the plug-in window mid-performance. The one most people want: put <strong>Reset
+    Orientation</strong> on a footswitch or a pad and re-centre without touching the PC.</p>
+    <p>What's available, for each MUGIC (<code>M1</code>...<code>M12</code>), plus an <strong>All</strong> version that hits
+    every connected device at once:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>Parameter</th>
+    <th>What it does</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Reset Orientation</strong></td>
+    <td>Re-centres the device — wherever it's pointing now becomes "straight ahead"</td>
+    </tr>
+    <tr>
+    <td><strong>Reset Wrap</strong></td>
+    <td>Clears built-up yaw wrap-around</td>
+    </tr>
+    <tr>
+    <td><strong>Reset Range Cal</strong></td>
+    <td>Clears the sweep calibration for that device</td>
+    </tr>
+    <tr>
+    <td><strong>MIDI Out</strong></td>
+    <td>Turns that one device's MIDI output on/off — a per-device mute</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>The three resets are <strong>momentary</strong>: they fire once when the button goes down, so
+    a controller button that sends on-press / off-release does exactly the right
+    thing, and holding it down won't keep re-firing. <strong>MIDI Out</strong> is an ordinary
+    on/off switch and stays in step with the MIDI ON/OFF button in the plug-in
+    window, whichever one you change.</p>
+    <p><strong>Ableton Live</strong> — click the plug-in's Configure button so the parameters are
+    listed, press <code>Ctrl+M</code> for MIDI Map Mode, click the parameter, then press your
+    controller button.</p>
+    <p><strong>Reaper</strong> — right-click the parameter in the FX window → <em>Learn</em>, then press
+    your controller button.</p>
+    <p><strong>Cubase / FL Studio / Bitwig</strong> — use the host's usual "learn" on the parameter,
+    or draw it into an automation lane and put a short blip where you want the reset.</p>
+    <p><strong>SuperCollider (VSTPlugin)</strong> — the parameters are addressable by name, e.g.
+    <code>~fx.set("Reset Orientation (M1)", 1); ~fx.set("Reset Orientation (M1)", 0);</code>
+    Use <code>~fx.printParams</code> to list them.</p>
+    <blockquote>
+    <p>Note that the motion values themselves (yaw, pitch, roll, energy, jolt) are
+    <strong>not</strong> in this list, and that's deliberate — a plug-in parameter is something
+    the DAW sends <em>into</em> the plug-in. Motion still comes <em>out</em> as MIDI, exactly as
+    before; see <strong>Sending MIDI</strong> above.</p>
+    </blockquote>
+    <hr />
+    <h2>Known limitations in this build</h2>
+    <ul>
+    <li>Not code-signed (SmartScreen warning, above).</li>
+    <li><strong>Yaw left/right may be reversed</strong> depending on how the sensor is oriented on
+      your hand or instrument. Pitch and roll are unaffected.</li>
+    <li>Some panel labels can be clipped if the window is small — drag the window
+      larger.</li>
+    </ul>
+  </article>
+  <p class="ver">MUGIC MOTION 1.1.1 &middot; Windows install guide</p>
+</div>
+</body>
+</html>

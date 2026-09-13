@@ -51,8 +51,15 @@
   }
   .btn:hover { opacity:.88; }
   .btn small { display:block; font-weight:400; opacity:.8; font-size:0.78rem; margin-top:3px; }
-  .req { color:var(--muted); font-size:0.86rem; margin:14px 0 0; }
-  .req a { color:inherit; }
+  .guides { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+  .btn2 {
+    flex:1 1 240px; display:block; text-decoration:none; text-align:center;
+    border:1.5px solid var(--accent); color:var(--accent); font-weight:600;
+    padding:12px 18px; border-radius:10px; background:transparent;
+    transition:background .15s, color .15s;
+  }
+  .btn2:hover { background:var(--accent); color:var(--accent-fg); }
+  .req { color:var(--muted); font-size:0.86rem; margin:18px 0 0; text-align:center; }
   .notes { margin-top:20px; padding-top:18px; border-top:1px solid var(--line); }
   .notes h3 { font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin:0 0 10px; }
   .notes ul { margin:0; padding-left:20px; }
@@ -125,6 +132,14 @@
     return dt.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
   }
 
+  // Published versions link to a rendered guide page; entries written before those
+  // existed fall back to the .md asset so older rows keep working.
+  function guide(v, platform) {
+    if (platform === 'macos')   return v.macosGuide   || v.macosReadme   || '';
+    if (platform === 'windows') return v.windowsGuide || v.windowsReadme || '';
+    return '';
+  }
+
   function renderLatest(v) {
     return '' +
       '<div class="card">' +
@@ -137,12 +152,11 @@
           (v.macos ? '<a class="btn" href="' + esc(v.macos) + '">Download for macOS<small>Universal installer · Intel &amp; Apple Silicon</small></a>' : '') +
           (v.windows ? '<a class="btn" href="' + esc(v.windows) + '">Download for Windows<small>64-bit · VST3 &amp; standalone</small></a>' : '') +
         '</div>' +
-        '<p class="req">macOS 11 Big Sur or later · Windows 10 / 11 64-bit. ' +
-          'Install guides: ' +
-          (v.macosReadme ? '<a href="' + esc(v.macosReadme) + '">macOS</a>' : '') +
-          (v.macosReadme && v.windowsReadme ? ' · ' : '') +
-          (v.windowsReadme ? '<a href="' + esc(v.windowsReadme) + '">Windows</a>' : '') +
-        '</p>' +
+        '<div class="guides">' +
+          (guide(v, 'macos')   ? '<a class="btn2" href="' + esc(guide(v, 'macos'))   + '">macOS install guide</a>' : '') +
+          (guide(v, 'windows') ? '<a class="btn2" href="' + esc(guide(v, 'windows')) + '">Windows install guide</a>' : '') +
+        '</div>' +
+        '<p class="req">macOS 11 Big Sur or later · Windows 10 / 11 64-bit</p>' +
         (v.notes ? '<div class="notes"><h3>What’s new</h3>' + md(v.notes) + '</div>' : '') +
       '</div>';
   }
@@ -155,7 +169,9 @@
           '<span class="date">' + esc(fmtDate(v.date)) + '</span>' +
           '<span class="links">' +
             (v.macos ? '<a href="' + esc(v.macos) + '">macOS</a>' : '') +
+            (guide(v, 'macos') ? '<a href="' + esc(guide(v, 'macos')) + '">guide</a>' : '') +
             (v.windows ? '<a href="' + esc(v.windows) + '">Windows</a>' : '') +
+            (guide(v, 'windows') ? '<a href="' + esc(guide(v, 'windows')) + '">guide</a>' : '') +
           '</span>' +
         '</div>' +
         (v.notes ? '<div class="notes">' + md(v.notes) + '</div>' : '') +
