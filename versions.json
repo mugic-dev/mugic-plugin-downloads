@@ -1,6 +1,17 @@
 {
-  "latest": "1.1.1",
+  "latest": "1.2.0",
   "versions": [
+    {
+      "version": "1.2.0",
+      "date": "2026-09-19",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.2.0/MUGIC-MOTION-1.2.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.2.0/MUGIC-MOTION-1.2.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.2.0/MUGIC-MOTION-1.2.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.2.0/MUGIC-MOTION-1.2.0-WINDOWS-README.md",
+      "macosGuide": "guides/1.2.0/macos.html",
+      "windowsGuide": "guides/1.2.0/windows.html",
+      "notes": "You can now type MIDI CC numbers in directly, instead of picking them from a menu.\n\n- A **PARAM MODE** selector sits between **MIDI OUT TO** and **CHANNEL**.\n  **Presets** is the plug-in as you know it \u2014 the named MIDI PARAM menus plus\n  CUSTOM CC#. **Numerical** replaces each menu with a single **MIDI CC#** box\n  (0\u2013127), for when you already know the controller numbers you want.\n- Switching between the two modes never rewrites a mapping. Type a number that\n  matches a named preset and the name comes back, so flipping to Presets reads\n  \"pan (CC 10)\" rather than \"custom CC#\".\n- Clearing the box mutes that parameter, so muting stays one keystroke away in\n  Numerical mode.\n- The instructions panel inside the plug-in documents both modes.\n\n**Fixed:** Device sometimes went quiet when the plug-in was reloaded without\nrestarting the host \u2014 reopening a session, or restarting the SuperCollider\nserver \u2014 even though the **MIDI OUT** button still read **MIDI ON**.\nThe **MIDI OUT** button now always shows what the plug-in is really doing,\nincluding when your DAW changes it through automation.\n\nThe install instructions were corrected too: MUGIC MOTION is an **instrument**\n(AU / VST3), so load it on an instrument track \u2014 it never appears under audio\neffects \u2014 and your host lists it as **MUGIC MOTION**, not KIMARI.\n\nThe macOS installer is signed and notarized by Apple, and universal for Intel and\nApple Silicon."
+    },
     {
       "version": "1.1.1",
       "date": "2026-09-12",

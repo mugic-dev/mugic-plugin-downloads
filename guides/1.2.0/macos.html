@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing MUGIC MOTION 1.2.0 on macOS</title>
+<meta name="description" content="Installing the MUGIC MOTION plugin 1.2.0 on macOS.">
+<style>
+  :root {
+    --bg:#f7f7f5; --card:#ffffff; --fg:#17181c; --muted:#5f6470;
+    --line:#e3e4e8; --accent:#1f6feb; --soft:#f0f1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+      --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+    --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 80px; }
+  .back {
+    display:inline-block; color:var(--muted); text-decoration:none;
+    font-size:0.9rem; margin-bottom:26px;
+  }
+  .back:hover { color:var(--accent); }
+  .doc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:34px; }
+  h1 { font-size:1.7rem; margin:0 0 22px; letter-spacing:-0.02em; line-height:1.25; }
+  h2 { font-size:1.2rem; margin:34px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:1rem; margin:26px 0 10px; }
+  h2:first-of-type { margin-top:24px; }
+  p, li { overflow-wrap:break-word; }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  code { background:var(--soft); padding:2px 6px; border-radius:5px; font-size:0.88em; }
+  pre {
+    background:var(--soft); padding:14px 16px; border-radius:10px;
+    overflow-x:auto; border:1px solid var(--line);
+  }
+  pre code { background:none; padding:0; font-size:0.85rem; line-height:1.5; }
+  blockquote {
+    margin:18px 0; padding:2px 18px; border-left:3px solid var(--accent);
+    color:var(--muted); background:var(--soft); border-radius:0 8px 8px 0;
+  }
+  blockquote p { margin:12px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:0.94rem; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  .tablewrap { overflow-x:auto; }
+  .ver { color:var(--muted); font-size:0.85rem; margin:26px 0 0; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../../">&larr; All downloads</a>
+  <article class="doc">
+    <h1>MUGIC MOTION — macOS Installation</h1>
+    <p><strong>Version 1.2.0 · macOS 11 Big Sur or later · Intel and Apple Silicon (universal)</strong></p>
+    <p>Download <strong><code>MUGIC-MOTION-1.2.0-universal.pkg</code></strong> and double-click it.</p>
+    <p>The installer puts all three formats where your software expects them:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>Format</th>
+    <th>Installed to</th>
+    <th>Used by</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>AU</strong> (Audio Unit)</td>
+    <td><code>/Library/Audio/Plug-Ins/Components</code></td>
+    <td>Logic Pro, GarageBand, Live</td>
+    </tr>
+    <tr>
+    <td><strong>VST3</strong></td>
+    <td><code>/Library/Audio/Plug-Ins/VST3</code></td>
+    <td>Ableton Live, Reaper, Cubase, Bitwig</td>
+    </tr>
+    <tr>
+    <td><strong>App</strong> (standalone)</td>
+    <td><code>/Applications</code></td>
+    <td>no DAW needed</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <blockquote>
+    <p><strong>It will ask for your admin password.</strong> That's expected — Logic and GarageBand
+    only scan the <em>system</em> plug-in folders, not your home folder, so the plug-ins
+    have to be installed system-wide.</p>
+    </blockquote>
+    <p>The installer is signed and <strong>notarized by Apple</strong> (KIMARI, LLC), so it should
+    open without a Gatekeeper warning. If macOS ever does complain, right-click the
+    <code>.pkg</code> → <strong>Open</strong> → <strong>Open</strong>.</p>
+    <hr />
+    <h2>After installing</h2>
+    <blockquote>
+    <p><strong>MUGIC MOTION is an <em>instrument</em>, not an audio effect.</strong> Look for it wherever
+    your DAW lists synths / instruments — never under Audio FX or audio effects.</p>
+    </blockquote>
+    <p><strong>Logic Pro / GarageBand</strong> — restart the app; Logic validates new Audio Units on
+    launch. Create a <strong>Software Instrument</strong> track, click the instrument slot, and
+    choose <em>AU Instruments → MUGIC MOTION → MUGIC MOTION Plugin</em>. If it doesn't show
+    up, reset Logic's AU cache:</p>
+    <pre><code class="language-sh">rm -rf ~/Library/Caches/AudioUnitCache
+    </code></pre>
+    <p>then relaunch Logic.</p>
+    <p><strong>Ableton Live</strong> — Preferences → Plug-Ins → turn on <em>Use VST3 Plug-In System
+    Folders</em>, then <em>Rescan</em>. It appears under <strong>Instruments → MUGIC MOTION Plugin</strong>;
+    drag it onto a MIDI track.</p>
+    <p><strong>Reaper / Cubase / Bitwig</strong> — rescan plug-ins in preferences, then look under
+    instruments (VSTi), not audio effects.</p>
+    <p><strong>Standalone</strong> — just open <em>MUGIC MOTION Plugin</em> from Applications.</p>
+    <hr />
+    <h2>Connecting your MUGIC device</h2>
+    <ol>
+    <li>Power on the MUGIC; put it on the same Wi-Fi network as the Mac.</li>
+    <li>In the top-left panel check <strong>Port</strong> (default <code>4000</code>) and <strong>Prefix</strong>
+       (default <code>/mugicdata</code>) — these must match what the device sends.</li>
+    <li>The YAW / ROLL / PITCH readouts start moving when data arrives.</li>
+    </ol>
+    <blockquote>
+    <p>Nothing moving? Usually: different network, another app already holds port
+    4000, or the <strong>Prefix</strong> doesn't match the device. Quick test — <strong>clear the
+    Prefix field</strong>; an empty prefix accepts any address.</p>
+    </blockquote>
+    <p>The first launch may ask for <strong>Local Network</strong> permission. Allow it — the device
+    streams over UDP and denying it means no data. To fix later: System Settings →
+    Privacy &amp; Security → Local Network.</p>
+    <hr />
+    <h2>Calibrating (changed in 1.0.1)</h2>
+    <p>Click <strong>Calibrate Motion</strong>, choose an axis, and <strong>keep moving that axis back and
+    forth through its full range</strong> for the whole countdown. The app records the
+    minimum and maximum you reach and uses that span as the range.</p>
+    <blockquote>
+    <p>In 1.0.0 you had to hold two separate poses, which was slow and easy to get
+    wrong. From 1.0.1 it's a single sweep per axis — just keep moving until the
+    countdown ends. Each axis is calibrated independently; you don't have to do
+    all three.</p>
+    </blockquote>
+    <h2>Sending MIDI</h2>
+    <p>Choose a <strong>MIDI param</strong> per MUGIC parameter, set the <strong>MIDI MODE</strong> (<em>Continuous</em>
+    tracks motion across the full range; <em>Switch</em> sends on/off as you cross THRESH),
+    then click <strong>ASSIGN</strong>. The button then reads <strong>LEARN</strong> — click it and the plug-in
+    streams <em>only</em> that one parameter, so your DAW's MIDI-learn latches onto the
+    right control instead of whichever axis moved first.</p>
+    <p>Set a param's MIDI target to <strong>None</strong> to mute just that one. The global <strong>MIDI
+    ON/OFF</strong> button mutes everything.</p>
+    <hr />
+    <h2>Controlling the plug-in from your DAW (new in 1.1.0)</h2>
+    <p>The plug-in's buttons are now also <strong>parameters your DAW can see</strong>, so you can
+    work them from a MIDI controller or an automation lane instead of reaching for
+    the plug-in window mid-performance. The one most people want: put <strong>Reset
+    Orientation</strong> on a footswitch or a pad and re-centre without touching the Mac.</p>
+    <p>What's available, for each MUGIC (<code>M1</code>...<code>M12</code>), plus an <strong>All</strong> version that hits
+    every connected device at once:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>Parameter</th>
+    <th>What it does</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Reset Orientation</strong></td>
+    <td>Re-centres the device — wherever it's pointing now becomes "straight ahead"</td>
+    </tr>
+    <tr>
+    <td><strong>Reset Wrap</strong></td>
+    <td>Clears built-up yaw wrap-around</td>
+    </tr>
+    <tr>
+    <td><strong>Reset Range Cal</strong></td>
+    <td>Clears the sweep calibration for that device</td>
+    </tr>
+    <tr>
+    <td><strong>MIDI Out</strong></td>
+    <td>Turns that one device's MIDI output on/off — a per-device mute</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>The three resets are <strong>momentary</strong>: they fire once when the button goes down, so
+    a controller button that sends on-press / off-release does exactly the right
+    thing, and holding it down won't keep re-firing. <strong>MIDI Out</strong> is an ordinary
+    on/off switch and stays in step with the MIDI ON/OFF button in the plug-in
+    window, whichever one you change.</p>
+    <p><strong>Logic Pro</strong> — with MUGIC MOTION selected, use <em>Controller Assignments →
+    Learn Mode</em> (or a Smart Control), then press the button on your controller.</p>
+    <p><strong>Ableton Live</strong> — click the plug-in's ⚙/Configure button so the parameters are
+    listed, press <code>Cmd+M</code> for MIDI Map Mode, click the parameter, then press your
+    controller button.</p>
+    <p><strong>Reaper / Cubase / Bitwig</strong> — use the host's usual "learn" on the parameter, or
+    draw it into an automation lane and put a short blip where you want the reset.</p>
+    <blockquote>
+    <p>Note that the motion values themselves (yaw, pitch, roll, energy, jolt) are
+    <strong>not</strong> in this list, and that's deliberate — a plug-in parameter is something
+    the DAW sends <em>into</em> the plug-in. Motion still comes <em>out</em> as MIDI, exactly as
+    before; see <strong>Sending MIDI</strong> above.</p>
+    </blockquote>
+    <hr />
+    <h2>Known limitations in this build</h2>
+    <ul>
+    <li><strong>Yaw left/right may be reversed</strong> depending on how the sensor is oriented on
+      your hand or instrument. Pitch and roll are unaffected.</li>
+    <li>Some labels in the left column can be clipped on smaller displays — drag the
+      window larger.</li>
+    </ul>
+  </article>
+  <p class="ver">MUGIC MOTION 1.2.0 &middot; macOS install guide</p>
+</div>
+</body>
+</html>
