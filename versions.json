@@ -1,6 +1,17 @@
 {
-  "latest": "1.3.1",
+  "latest": "1.3.3",
   "versions": [
+    {
+      "version": "1.3.3",
+      "date": "2026-09-29",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.3/MUGIC-MOTION-1.3.3-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.3/MUGIC-MOTION-1.3.3-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.3/MUGIC-MOTION-1.3.3-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.3/MUGIC-MOTION-1.3.3-WINDOWS-README.md",
+      "macosGuide": "guides/1.3.3/macos.html",
+      "windowsGuide": "guides/1.3.3/windows.html",
+      "notes": "**New**\n\n- A settings wheel on **YAW**, **PITCH** and **ROLL** with **MIDI Min** and\n  **MIDI Max** (0 and 127 by default), also added to the Energy and Jolt panels.\n  Each parameter then sends only over that range; set Min above Max to invert.\n- The number on each axis card is now the MIDI value actually sent.\n- No more **ASSIGN**: every change takes effect immediately. The button under\n  each parameter is now just **LEARN**.\n- The log now records what you do: MIDI mappings, presets, MIDI on/off and\n  routing, devices and calibration.\n- **Show log file** is also in the **Instructions** panel.\n\n**Fixed**\n\n- Pitch bend was off by half its range: a level ROLL sent full bend down and\n  jumped to full up past the middle. It now runs smoothly from full down to full\n  up, centred at rest.\n- The **MIDI PARAM** menu and the **CC#** number always agree: type 10 and the\n  menu shows *pan (CC 10)*; *none* always shows 0 (*off* in Numerical mode).\n- *Unassigned* no longer leaves the Default numbers behind.\n- Typing a CC# no longer sends the numbers on the way (typing 64 never sends 6)."
+    },
     {
       "version": "1.3.1",
       "date": "2026-09-28",
