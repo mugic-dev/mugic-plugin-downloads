@@ -1,6 +1,17 @@
 {
-  "latest": "2.0.2",
+  "latest": "2.0.3",
   "versions": [
+    {
+      "version": "2.0.3",
+      "date": "2026-10-05",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.3/MUGIC-MOTION-2.0.3-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.3/MUGIC-MOTION-2.0.3-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.3/MUGIC-MOTION-2.0.3-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.3/MUGIC-MOTION-2.0.3-WINDOWS-README.md",
+      "macosGuide": "guides/2.0.3/macos.html",
+      "windowsGuide": "guides/2.0.3/windows.html",
+      "notes": "**New**\n\n- The standalone app has its own icon: the MUGIC\u00ae \u03bc, marked **PLUGIN**, so it's\n  easy to tell apart from the MUGIC app and other MUGIC software.\n- The \u03bc logo at the top of the window is now sharp at any size."
+    },
     {
       "version": "2.0.2",
       "date": "2026-10-05",
