@@ -1,6 +1,17 @@
 {
-  "latest": "2.0.3",
+  "latest": "2.0.4",
   "versions": [
+    {
+      "version": "2.0.4",
+      "date": "2026-10-05",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.4/MUGIC-MOTION-2.0.4-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.4/MUGIC-MOTION-2.0.4-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.4/MUGIC-MOTION-2.0.4-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.4/MUGIC-MOTION-2.0.4-WINDOWS-README.md",
+      "macosGuide": "guides/2.0.4/macos.html",
+      "windowsGuide": "guides/2.0.4/windows.html",
+      "notes": "**New**\n\n- **The whole window scales.** Make the window bigger and the text, buttons and\n  axis pictures grow with it \u2014 drag the corner grip if the text is too small.\n- **Toggle mode** for every output, beside *Continuous* and *Switch*: each time\n  the motion rises past the crossing point, the output flips on or off. One jolt\n  turns sustain on, the next turns it off. Click the mode button to choose.\n- **JOLT** is now simply **Momentary** (on during the jolt) or **Toggle** (one\n  jolt on, the next off). Jolt is only ever on or off, so it no longer offers\n  *Continuous* or a crossing point.\n\n**Changed**\n\n- Jolt's *Trigger: toggle* setting has become the **Toggle** mode on the Jolt\n  row; projects that used it switch over automatically."
+    },
     {
       "version": "2.0.3",
       "date": "2026-10-05",
