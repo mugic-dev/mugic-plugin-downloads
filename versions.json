@@ -1,6 +1,39 @@
 {
-  "latest": "1.3.3",
+  "latest": "2.0.2",
   "versions": [
+    {
+      "version": "2.0.2",
+      "date": "2026-10-05",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.2/MUGIC-MOTION-2.0.2-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.2/MUGIC-MOTION-2.0.2-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.2/MUGIC-MOTION-2.0.2-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.2/MUGIC-MOTION-2.0.2-WINDOWS-README.md",
+      "macosGuide": "guides/2.0.2/macos.html",
+      "windowsGuide": "guides/2.0.2/windows.html",
+      "notes": "**New**\n\n- **Clear log**, next to *Show log file* (Device tab and the help window). For a\n  bug report: clear the log, make the problem happen again, then send the log.\n  The log is plain text, so you can also trim it before sending."
+    },
+    {
+      "version": "2.0.1",
+      "date": "2026-10-05",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.1/MUGIC-MOTION-2.0.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.1/MUGIC-MOTION-2.0.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.1/MUGIC-MOTION-2.0.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.1/MUGIC-MOTION-2.0.1-WINDOWS-README.md",
+      "macosGuide": "guides/2.0.1/macos.html",
+      "windowsGuide": "guides/2.0.1/windows.html",
+      "notes": "A redesigned, much smaller window \u2014 and six new things MUGIC\u00ae can send as MIDI.\n\n**New**\n\n- **Speed and steadiness as MIDI.** Each of YAW, PITCH and ROLL can now also send\n  how fast it's moving and how long it has held a direction. Open them with the\n  arrow next to the axis on the **Map** tab. They start off unassigned, so your\n  existing setup sends nothing new until you map them.\n- **A smaller window you can resize.** It opens at a compact size and you can drag\n  the corner grip to make it bigger; your project remembers the size and the tab\n  you were on.\n- **Three tabs.** **Calibrate** (opens first: it shows what yaw, pitch and roll\n  mean), **Map** (what each motion sends) and **Device** (port, prefix, adding\n  devices).\n- **One row per output.** Each row shows the live motion, the MIDI value being\n  sent, and a **Sends as** box: type a CC number or pick a named controller or\n  pitch bend.\n- **Settings on each row** (the sliders button): MIDI Min / Max, channel, and how\n  that motion is measured.\n- **Calibrate speed** \u2014 move as fast as you play and it sets that axis's full\n  speed.\n- **Energy: Rest and Play hard** set Low and High from your own playing.\n- **Jolt: see the signal** against the threshold, and **Suggest threshold** from a\n  few seconds of normal playing and three jolts.\n- **Calibration length** \u2014 5 seconds by default, longer if you need more time to\n  reach the extremes.\n- Steadiness has its own window for each axis.\n- **Show log file** is on the Device tab and at the bottom of the help window,\n  for sending us a bug report.\n\n**Changed**\n\n- Calibrating an axis: click **Calibrate YAW** (or PITCH, ROLL) right on the\n  Calibrate tab; orange marks show the range you reached.\n- **MIDI ON/OFF** is at the top right and belongs to the selected device, as\n  before.\n- Speed is now measured in degrees per second, so it no longer depends on how\n  fast the device streams.\n- Your saved presets carry over; presets saved now also keep MIDI Min / Max.\n\n**Removed**\n\n- The *Device* pause switch and the Orientation bars, replaced by the live meters\n  on each row."
+    },
+    {
+      "version": "1.3.4",
+      "date": "2026-09-29",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.4/MUGIC-MOTION-1.3.4-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.4/MUGIC-MOTION-1.3.4-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.4/MUGIC-MOTION-1.3.4-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v1.3.4/MUGIC-MOTION-1.3.4-WINDOWS-README.md",
+      "macosGuide": "guides/1.3.4/macos.html",
+      "windowsGuide": "guides/1.3.4/windows.html",
+      "notes": "**New**\n\n- The version number is shown next to *MUGIC MOTION* at the top of the window.\n\n**Fixed**\n\n- **Calibrate Motion** no longer hides the axis cards and Orientation bars: its\n  window now sits at the bottom, so you can watch what you're calibrating.\n\n**Changed**\n\n- **Noise Floor** (in the Jolt panel) now affects Jolt only. It used to quietly\n  apply to Energy as well, even though Energy has no Noise Floor setting. Energy's\n  **Low** already does that job: anything at or below Low sends 0. At the default\n  setting you won't hear a difference."
+    },
     {
       "version": "1.3.3",
       "date": "2026-09-29",

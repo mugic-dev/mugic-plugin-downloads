@@ -99,29 +99,37 @@
 (function () {
   var REPO = 'https://github.com/mugic-dev/mugic-plugin-downloads';
 
-  // Minimal markdown: paragraphs, "- " bullets, **bold**, `code`.
+  // Minimal markdown: paragraphs, "- " bullets, **bold**, *italic*, `code`. The CHANGELOG wraps
+  // long lines, so an indented line continues the bullet above it, and consecutive text lines
+  // form one paragraph.
   function esc(s) {
     return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
   function inline(s) {
     return esc(s)
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
       .replace(/`([^`]+)`/g, '<code>$1</code>');
   }
   function md(text) {
     if (!text) return '';
-    var out = '', list = [];
-    function flush() {
+    var out = '', list = [], para = [];
+    function flushPara() {
+      if (para.length) { out += '<p>' + inline(para.join(' ')) + '</p>'; para = []; }
+    }
+    function flushList() {
       if (list.length) { out += '<ul>' + list.map(function (i) { return '<li>' + inline(i) + '</li>'; }).join('') + '</ul>'; list = []; }
     }
     text.split(/\r?\n/).forEach(function (line) {
       var t = line.trim();
-      if (!t) { flush(); return; }
-      if (/^[-*]\s+/.test(t)) { list.push(t.replace(/^[-*]\s+/, '')); return; }
-      flush();
-      out += '<p>' + inline(t) + '</p>';
+      if (!t) { flushPara(); flushList(); return; }
+      if (/^[-*]\s+/.test(t)) { flushPara(); list.push(t.replace(/^[-*]\s+/, '')); return; }
+      if (list.length && /^\s/.test(line)) { list[list.length - 1] += ' ' + t; return; }
+      flushList();
+      para.push(t);
     });
-    flush();
+    flushPara();
+    flushList();
     return out;
   }
 
