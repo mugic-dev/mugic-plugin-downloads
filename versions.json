@@ -1,6 +1,17 @@
 {
-  "latest": "2.0.4",
+  "latest": "2.0.5",
   "versions": [
+    {
+      "version": "2.0.5",
+      "date": "2026-10-05",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.5/MUGIC-MOTION-2.0.5-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.5/MUGIC-MOTION-2.0.5-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.5/MUGIC-MOTION-2.0.5-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.0.5/MUGIC-MOTION-2.0.5-WINDOWS-README.md",
+      "macosGuide": "guides/2.0.5/macos.html",
+      "windowsGuide": "guides/2.0.5/windows.html",
+      "notes": "**New**\n\n- The battery voltage now appears next to the percentage, at the top of the\n  window and on the Device tab (e.g. *\u2248100% \u00b7 4.22 V*). The *\u2248* means the\n  percentage is estimated from the voltage.\n- **Battery** menu on the Device tab: *from voltage* (the default) or the\n  *device's reading*. Even on the device's reading, the plug-in switches to the\n  estimate if the reading doesn't match the voltage. Click its *?* for details.\n\n**Fixed**\n\n- **Battery reads right when the MUGIC\u00ae is full.** A fully charged MUGIC\u00ae\n  showed only about 85%. The charge is now worked out from the battery voltage,\n  the same way the MUGIC\u00ae Max app does, so the two agree."
+    },
     {
       "version": "2.0.4",
       "date": "2026-10-05",
