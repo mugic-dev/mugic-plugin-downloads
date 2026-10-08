@@ -1,6 +1,17 @@
 {
-  "latest": "2.0.5",
+  "latest": "2.1.0",
   "versions": [
+    {
+      "version": "2.1.0",
+      "date": "2026-10-07",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.0/MUGIC-MOTION-2.1.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.0/MUGIC-MOTION-2.1.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.0/MUGIC-MOTION-2.1.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.0/MUGIC-MOTION-2.1.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.1.0/macos.html",
+      "windowsGuide": "guides/2.1.0/windows.html",
+      "notes": "**New**\n\n- **High-resolution (14-bit) CC.** Any output sent as CC 0\u201331 can now go out\n  in 16,384 steps instead of 128, for smooth sweeps with no audible stepping on\n  filters and other sensitive controls. Click the small **14** next to *Sends\n  as*, or type a **+** after the number (e.g. `14+`). It is sent as the\n  standard pair \u2014 CC 14 with CC 46, CC 1 with CC 33, and so on \u2014 so use it only\n  with synths and DAWs that support 14-bit CC. Off by default; existing\n  projects and presets are unchanged."
+    },
     {
       "version": "2.0.5",
       "date": "2026-10-05",
