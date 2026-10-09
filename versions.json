@@ -1,6 +1,17 @@
 {
-  "latest": "2.1.1",
+  "latest": "2.1.2",
   "versions": [
+    {
+      "version": "2.1.2",
+      "date": "2026-10-08",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.2/MUGIC-MOTION-2.1.2-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.2/MUGIC-MOTION-2.1.2-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.2/MUGIC-MOTION-2.1.2-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.2/MUGIC-MOTION-2.1.2-WINDOWS-README.md",
+      "macosGuide": "guides/2.1.2/macos.html",
+      "windowsGuide": "guides/2.1.2/windows.html",
+      "notes": "**Improved**\n\n- **Preset menu grows with the window.** Making the plugin window wider now\n  widens the Preset menu (and the name box when saving a preset), so long\n  preset names fit, instead of leaving an empty gap next to the tabs."
+    },
     {
       "version": "2.1.1",
       "date": "2026-10-08",
