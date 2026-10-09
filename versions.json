@@ -1,6 +1,17 @@
 {
-  "latest": "2.1.0",
+  "latest": "2.1.1",
   "versions": [
+    {
+      "version": "2.1.1",
+      "date": "2026-10-08",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.1/MUGIC-MOTION-2.1.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.1/MUGIC-MOTION-2.1.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.1/MUGIC-MOTION-2.1.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.1/MUGIC-MOTION-2.1.1-WINDOWS-README.md",
+      "macosGuide": "guides/2.1.1/macos.html",
+      "windowsGuide": "guides/2.1.1/windows.html",
+      "notes": "**Fixed**\n\n- **Runs on macOS 11 Big Sur and later again.** 2.1.0 (and recent builds\n  before it) only opened on the newest macOS (26 Tahoe); on older versions\n  \u2014 including Apple Silicon Macs such as M3 on Sonoma or Sequoia \u2014 the app\n  would not launch and the AU/VST3 would not load in your DAW."
+    },
     {
       "version": "2.1.0",
       "date": "2026-10-07",
