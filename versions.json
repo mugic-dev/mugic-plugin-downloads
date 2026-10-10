@@ -1,6 +1,17 @@
 {
-  "latest": "2.1.3",
+  "latest": "2.2.0",
   "versions": [
+    {
+      "version": "2.2.0",
+      "date": "2026-10-10",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.2.0/MUGIC-MOTION-2.2.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.2.0/MUGIC-MOTION-2.2.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.2.0/MUGIC-MOTION-2.2.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.2.0/MUGIC-MOTION-2.2.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.2.0/macos.html",
+      "windowsGuide": "guides/2.2.0/windows.html",
+      "notes": "**New**\n\n- **MUGIC MOTION Plugin for iPad.** The plugin now runs on iPad (iPadOS 16\n  or later) as an **Audio Unit (AUv3) MIDI effect** \u2014 add it in a music app\n  that hosts MIDI effects, such as Loopy Pro, and route its MIDI to any\n  instrument, just like on your computer. It also works as a standalone app. iPad\n  testers get it through TestFlight.\n- **Keeps playing in the background (iPad).** The standalone app keeps\n  receiving your MUGIC and sending MIDI while another app is in front.\n- **MUGIC as a MIDI source for other apps.** In the standalone app on Mac\n  and iPad, **Out** now offers *MUGIC MOTION (virtual port)*. Choose it and\n  any other app \u2014 a synth app on iPad, a DAW on Mac \u2014 can select\n  \"MUGIC MOTION\" as its MIDI input. On Mac you no longer need the IAC Driver\n  for this.\n\n**Good to know (iPad)**\n\n- The plugin and the standalone app both listen on the same network port\n  (4000), so use one at a time: close the standalone app before opening\n  the plugin in your music app, or restart the music app if the plugin\n  shows no motion.\n- MUGIC sends controllers and pitch bend, not notes: play notes on a\n  keyboard (on-screen or MIDI) and shape them with your movements."
+    },
     {
       "version": "2.1.3",
       "date": "2026-10-09",
