@@ -1,6 +1,17 @@
 {
-  "latest": "2.1.2",
+  "latest": "2.1.3",
   "versions": [
+    {
+      "version": "2.1.3",
+      "date": "2026-10-09",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.3/MUGIC-MOTION-2.1.3-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.3/MUGIC-MOTION-2.1.3-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.3/MUGIC-MOTION-2.1.3-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.1.3/MUGIC-MOTION-2.1.3-WINDOWS-README.md",
+      "macosGuide": "guides/2.1.3/macos.html",
+      "windowsGuide": "guides/2.1.3/windows.html",
+      "notes": "**Fixed**\n\n- **iPad: you can change what each movement sends.** On iPad the \"Sends as\"\n  box (for example *modulation (CC 1)*) couldn't be changed, especially in\n  Loopy Pro. It is now a menu: tap it and pick pitch bend, a named\n  controller, or any CC number from 0 to 127. On Mac and Windows nothing\n  changes: you can still type into the box."
+    },
     {
       "version": "2.1.2",
       "date": "2026-10-08",
