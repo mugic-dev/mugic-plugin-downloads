@@ -1,6 +1,17 @@
 {
-  "latest": "2.4.0",
+  "latest": "2.5.0",
   "versions": [
+    {
+      "version": "2.5.0",
+      "date": "2026-10-11",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.5.0/MUGIC-MOTION-2.5.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.5.0/MUGIC-MOTION-2.5.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.5.0/MUGIC-MOTION-2.5.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.5.0/MUGIC-MOTION-2.5.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.5.0/macos.html",
+      "windowsGuide": "guides/2.5.0/windows.html",
+      "notes": "**Changed**\n\n- **The Map tab's \"Sends as\" menu shows its whole list.** Click the box and the\n  full menu opens, with a scrollbar right away and as tall as the window allows;\n  typing trims it to the matching entries. The last entry, **Custom CC**, puts\n  \"CC \" in the box so you just type the number (0\u2013127) and press Enter.\n- **Menu \u2192 Settings\u2026 \u2192 Extended CC list** adds more standard controllers to that\n  menu: breath, foot, portamento time, hold 2, resonance, release, attack, cutoff,\n  reverb, tremolo, chorus, detune and phaser. Off by default."
+    },
     {
       "version": "2.4.0",
       "date": "2026-10-10",
