@@ -28,3 +28,9 @@ Source, issues and development: private repository `mugic-dev/mugic-plugin`.
 `docs/{MACOS,WINDOWS}_INSTALL.md` at publish time by `tools/render-guide.py`, so
 users read them as pages instead of downloading a `.md`. They are generated —
 edit the Markdown in the private repo, not the HTML here.
+
+## MUGIC Bluetooth
+
+`bluetooth/` is the same kind of page for the standalone MUGIC Bluetooth app: its own
+`bluetooth/versions.json` and `bluetooth/guides/<version>/`, with downloads on Releases tagged
+`bluetooth-v<version>`. Rendered with `tools/render-guide.py ... --product "MUGIC Bluetooth"`.

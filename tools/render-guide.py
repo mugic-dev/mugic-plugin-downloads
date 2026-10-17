@@ -26,7 +26,7 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-<meta name="description" content="Installing the MUGIC MOTION plugin {version} on {platform}.">
+<meta name="description" content="Installing {product} {version} on {platform}.">
 <style>
   :root {{
     --bg:#f7f7f5; --card:#ffffff; --fg:#17181c; --muted:#5f6470;
@@ -86,7 +86,7 @@ TEMPLATE = """<!doctype html>
   <article class="doc">
 {body}
   </article>
-  <p class="ver">MUGIC MOTION {version} &middot; {platform} install guide</p>
+  <p class="ver">{product} {version} &middot; {platform} install guide</p>
 </div>
 </body>
 </html>
@@ -99,6 +99,7 @@ def main() -> None:
     ap.add_argument("output")
     ap.add_argument("--version", required=True)
     ap.add_argument("--platform", required=True, choices=sorted(PLATFORM_LABEL))
+    ap.add_argument("--product", default="MUGIC MOTION", help="e.g. \"MUGIC Bluetooth\" for bluetooth/guides")
     args = ap.parse_args()
 
     text = pathlib.Path(args.source).read_text(encoding="utf-8")
@@ -111,7 +112,8 @@ def main() -> None:
 
     label = PLATFORM_LABEL[args.platform]
     html = TEMPLATE.format(
-        title=f"Installing MUGIC MOTION {args.version} on {label}",
+        title=f"Installing {args.product} {args.version} on {label}",
+        product=args.product,
         version=args.version,
         platform=label,
         body="\n".join("    " + line for line in body.splitlines()),
