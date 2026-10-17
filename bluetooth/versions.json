@@ -1,0 +1,16 @@
+{
+  "latest": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-16",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.0.0/MUGIC-Bluetooth-1.0.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.0.0/MUGIC-Bluetooth-1.0.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.0.0/MUGIC-Bluetooth-1.0.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.0.0/MUGIC-Bluetooth-1.0.0-WINDOWS-README.md",
+      "macosGuide": "guides/1.0.0/macos.html",
+      "windowsGuide": "guides/1.0.0/windows.html",
+      "notes": "**New**\n\n- **MUGIC Bluetooth** receives your MUGIC's motion data over Bluetooth and passes it on, unchanged,\n  as UDP to the MUGIC MOTION plug-in, Max or Ableton \u2014 exactly as if the MUGIC streamed over Wi-Fi.\n  No Wi-Fi network to set up.\n- One row per MUGIC: pick it by its BLE name (the list shows MUGICs nearby), and choose the IP and\n  UDP port to send to (127.0.0.1 and 4000, 4001, \u2026 by default). **+ Add slot** adds rows.\n- Shows each MUGIC's status (searching, connecting, data rate) and battery, and reconnects on its\n  own when a MUGIC drops out or comes back in range.\n- **Menu \u2192 Save setup\u2026 / Open setup\u2026** keeps a setup as a `.mugicbluetooth` file.\n- Needs MUGIC firmware 2.2.0 or later, in BLE mode."
+    }
+  ]
+}
