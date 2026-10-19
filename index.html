@@ -33,11 +33,16 @@
   h1 .reg { font-size:0.6em; vertical-align:super; }
   .tag { color:var(--muted); margin:0; }
   .news {
-    display:block; margin-top:18px; padding:12px 16px; border-radius:10px; text-decoration:none;
-    background:var(--soft); border:1px solid var(--line); color:var(--fg);
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-top:20px; padding:14px 18px;
+    border-radius:12px; text-decoration:none; color:#ffffff; font-weight:500;
+    background:linear-gradient(135deg, #1f6feb 0%, #7c3aed 100%);
+    box-shadow:0 6px 18px rgba(124,58,237,.35); transition:transform .15s, box-shadow .15s;
   }
-  .news:hover { border-color:var(--accent); }
-  .news strong { color:var(--accent); margin-right:6px; }
+  .news:hover { transform:translateY(-1px); box-shadow:0 8px 22px rgba(124,58,237,.5); }
+  .news strong {
+    background:#ffd60a; color:#17181c; padding:4px 10px; border-radius:999px;
+    font-weight:800; letter-spacing:0.02em;
+  }
   .card {
     background:var(--card); border:1px solid var(--line); border-radius:14px;
     padding:26px; margin-bottom:22px;
@@ -90,7 +95,7 @@
   <header>
     <h1>MUGIC MOTION<span class="reg">®</span> Plugin</h1>
     <p class="tag">Audio Unit, VST3 and standalone — turn MUGIC motion into MIDI.</p>
-    <a class="news" href="bluetooth/"><strong>NEW:</strong> MUGIC Bluetooth app — use your MUGIC over Bluetooth, no Wi-Fi needed. Download &rarr;</a>
+    <a class="news" href="bluetooth/"><strong>NEW: MUGIC Bluetooth app</strong> Use your MUGIC over Bluetooth, no Wi-Fi needed. Download &rarr;</a>
   </header>
 
   <div id="latest"><p class="msg">Loading downloads…</p></div>
