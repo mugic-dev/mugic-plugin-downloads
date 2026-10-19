@@ -1,6 +1,17 @@
 {
-  "latest": "2.5.0",
+  "latest": "2.6.0",
   "versions": [
+    {
+      "version": "2.6.0",
+      "date": "2026-10-19",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.6.0/MUGIC-MOTION-2.6.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.6.0/MUGIC-MOTION-2.6.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.6.0/MUGIC-MOTION-2.6.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.6.0/MUGIC-MOTION-2.6.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.6.0/macos.html",
+      "windowsGuide": "guides/2.6.0/windows.html",
+      "notes": "**New**\n\n- **Connect over Bluetooth, no extra app.** In the standalone app, each device on the\n  **Device** tab now has a **Source**: Wi-Fi (its port, as before) or **BLE**, where you\n  pick your MUGIC from the ones nearby. It's remembered by name and reconnects by itself\n  when the MUGIC comes back in range. Your MUGIC needs firmware 2.2.0 or later with its\n  output set to BLE. In a DAW, keep using the MUGIC Bluetooth app with a Wi-Fi source.\n- **Warns when the app is open twice.** Two copies of the MUGIC MOTION app compete for\n  the same ports and for Bluetooth. The app now tells you when another copy is already\n  running, and on macOS offers to quit it.\n- **Battery in the log.** Every 5 minutes, for each MUGIC sending data, the log file now\n  records its battery voltage, its own battery percentage, its data rate and how long it\n  has been connected, as MUGIC Bluetooth does. Handy for battery-life tests."
+    },
     {
       "version": "2.5.0",
       "date": "2026-10-11",

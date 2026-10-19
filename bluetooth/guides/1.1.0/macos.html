@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing MUGIC Bluetooth 1.1.0 on macOS</title>
+<meta name="description" content="Installing MUGIC Bluetooth 1.1.0 on macOS.">
+<style>
+  :root {
+    --bg:#f7f7f5; --card:#ffffff; --fg:#17181c; --muted:#5f6470;
+    --line:#e3e4e8; --accent:#1f6feb; --soft:#f0f1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+      --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+    --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 80px; }
+  .back {
+    display:inline-block; color:var(--muted); text-decoration:none;
+    font-size:0.9rem; margin-bottom:26px;
+  }
+  .back:hover { color:var(--accent); }
+  .doc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:34px; }
+  h1 { font-size:1.7rem; margin:0 0 22px; letter-spacing:-0.02em; line-height:1.25; }
+  h2 { font-size:1.2rem; margin:34px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:1rem; margin:26px 0 10px; }
+  h2:first-of-type { margin-top:24px; }
+  p, li { overflow-wrap:break-word; }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  code { background:var(--soft); padding:2px 6px; border-radius:5px; font-size:0.88em; }
+  pre {
+    background:var(--soft); padding:14px 16px; border-radius:10px;
+    overflow-x:auto; border:1px solid var(--line);
+  }
+  pre code { background:none; padding:0; font-size:0.85rem; line-height:1.5; }
+  blockquote {
+    margin:18px 0; padding:2px 18px; border-left:3px solid var(--accent);
+    color:var(--muted); background:var(--soft); border-radius:0 8px 8px 0;
+  }
+  blockquote p { margin:12px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:0.94rem; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  .tablewrap { overflow-x:auto; }
+  .ver { color:var(--muted); font-size:0.85rem; margin:26px 0 0; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../../">&larr; All downloads</a>
+  <article class="doc">
+    <h1>MUGIC Bluetooth — macOS</h1>
+    <p><strong>Version 1.0.0 · macOS 11 Big Sur or later · Intel and Apple Silicon</strong></p>
+    <p>MUGIC Bluetooth receives your MUGIC's motion data over Bluetooth and sends it on, unchanged, as UDP
+    — so the <strong>MUGIC MOTION plug-in</strong>, <strong>Max</strong> and <strong>Ableton</strong> receive it exactly as if the MUGIC
+    streamed over Wi-Fi. There's no Wi-Fi network to set up, and Bluetooth uses less battery.</p>
+    <p>The download is <strong><code>MUGIC-Bluetooth-1.0.0-universal.pkg</code></strong>.</p>
+    <hr />
+    <h2>1. Install</h2>
+    <p>Double-click <strong><code>MUGIC-Bluetooth-1.0.0-universal.pkg</code></strong> and follow the installer. It puts
+    <strong>MUGIC Bluetooth</strong> in your <strong>Applications</strong> folder.</p>
+    <p>The first time it opens, macOS asks whether MUGIC Bluetooth may use Bluetooth: click <strong>Allow</strong>.
+    If you clicked <strong>Don't Allow</strong>, the app says so at the top; turn it on in
+    <em>System Settings → Privacy &amp; Security → Bluetooth</em>.</p>
+    <h2>2. Put your MUGIC in BLE mode</h2>
+    <p>MUGIC Bluetooth needs <strong>MUGIC firmware 2.2.0 or later</strong>. To check or update it, use the
+    <a href="https://mugic-dev.github.io/flash-firmware/">MUGIC firmware page</a>.</p>
+    <p>Press the MUGIC's <strong>Mode</strong> button until it is in <strong>BLE mode</strong> (each press moves on:
+    Wi-Fi → BLE → USB). The MUGIC restarts, and its LED shows:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>LED</th>
+    <th>Meaning</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>green, blinking fast</td>
+    <td>BLE mode, waiting for MUGIC Bluetooth</td>
+    </tr>
+    <tr>
+    <td>green, blinking slowly</td>
+    <td>sending its data to MUGIC Bluetooth</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>In BLE mode the MUGIC's Wi-Fi is off. Press <strong>Mode</strong> again to go back to Wi-Fi.</p>
+    <h2>3. Pick your MUGIC</h2>
+    <p>Each row is one MUGIC:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>Column</th>
+    <th>What to set</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>BLE NAME</strong></td>
+    <td>the MUGIC's Bluetooth name — open the list to see the MUGICs nearby</td>
+    </tr>
+    <tr>
+    <td><strong>IP</strong></td>
+    <td>where to send: <code>127.0.0.1</code> is this computer</td>
+    </tr>
+    <tr>
+    <td><strong>UDP PORT</strong></td>
+    <td><code>4000</code> for the first MUGIC, <code>4001</code> for the second, …</td>
+    </tr>
+    <tr>
+    <td><strong>STATUS</strong></td>
+    <td><em>Searching…</em>, <em>Connecting…</em>, then the data rate, e.g. <code>50 Hz → :4000</code></td>
+    </tr>
+    <tr>
+    <td><strong>BATTERY</strong></td>
+    <td>the MUGIC's battery</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>Then, in the <strong>MUGIC MOTION plug-in</strong> (Device tab), Max or Ableton, receive on the same UDP port,
+    just as you would with Wi-Fi. Leave MUGIC Bluetooth open while you play: it only forwards while
+    it's running.</p>
+    <p><strong>+ Add slot</strong> adds a row on the next port. Two rows with the same BLE name both receive that
+    MUGIC (for example to send it to two programs). <strong>Menu → Save setup… / Open setup…</strong> keeps your
+    rows in a <code>.mugicbluetooth</code> file; the rows you had are also kept from one run to the next.</p>
+    <h2>If something doesn't work</h2>
+    <ul>
+    <li><strong>Searching…</strong> — the MUGIC isn't advertising: it's off, out of range, not in BLE mode, or
+      already connected to something else (for example the MUGIC BLE configurator page — close it).</li>
+    <li><strong>No BLE output</strong> — the MUGIC isn't in BLE mode, or its firmware is older than 2.2.0. Update it,
+      then switch it to BLE mode.</li>
+    <li><strong>A message at the top of the window</strong> — Bluetooth is off — turn it on in <em>System Settings → Bluetooth</em>.</li>
+    <li><strong>Data rate shows but nothing arrives in your program</strong> — the program must listen on the same UDP
+      port as the row, and only one program can listen on a port. Use another row and port for a second
+      program.</li>
+    <li>Bluetooth reaches a few metres, less through bodies and walls; keep the computer near the stage.</li>
+    </ul>
+  </article>
+  <p class="ver">MUGIC Bluetooth 1.1.0 &middot; macOS install guide</p>
+</div>
+</body>
+</html>

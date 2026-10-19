@@ -1,6 +1,17 @@
 {
-  "latest": "1.0.0",
+  "latest": "1.1.0",
   "versions": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-19",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.1.0/MUGIC-Bluetooth-1.1.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.1.0/MUGIC-Bluetooth-1.1.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.1.0/MUGIC-Bluetooth-1.1.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/bluetooth-v1.1.0/MUGIC-Bluetooth-1.1.0-WINDOWS-README.md",
+      "macosGuide": "guides/1.1.0/macos.html",
+      "windowsGuide": "guides/1.1.0/windows.html",
+      "notes": "**New**\n\n- **Log file.** MUGIC Bluetooth now keeps a log of each MUGIC connecting and disconnecting (with how\n  long it stayed connected), and every 5 minutes, for each connected MUGIC, its battery voltage,\n  the MUGIC's own battery percentage and its data rate \u2014 handy for checking battery life.\n  **Menu \u2192 Show log file** opens it in Finder / Explorer; **Menu \u2192 Clear log** empties it before a test."
+    },
     {
       "version": "1.0.0",
       "date": "2026-10-16",
