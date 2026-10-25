@@ -1,6 +1,17 @@
 {
-  "latest": "2.7.0",
+  "latest": "2.8.1",
   "versions": [
+    {
+      "version": "2.8.1",
+      "date": "2026-10-24",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.8.1/MUGIC-MOTION-2.8.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.8.1/MUGIC-MOTION-2.8.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.8.1/MUGIC-MOTION-2.8.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.8.1/MUGIC-MOTION-2.8.1-WINDOWS-README.md",
+      "macosGuide": "guides/2.8.1/macos.html",
+      "windowsGuide": "guides/2.8.1/windows.html",
+      "notes": "**New**\n\n- **Move sound in space: OSC output for ADM-OSC and Meyer SpaceMap Go.** The Map tab now\n  starts with **Output**: MIDI (as before; the tab is now **MAP \u2192 MIDI**), **ADM-OSC**\n  (SPAT Revolution, L-ISA, d&b Soundscape, HOLOPHONIX and others) or **SpaceMap Go**. Pick an\n  OSC output, type the computer or iPad it goes to (**Send to**, with the port), and each\n  of the 11 signals drives a spatial parameter instead of a MIDI message: by default yaw\n  pans the sound left and right (azimuth / position X), pitch raises it (elevation /\n  position Y), roll widens it (width / spread), energy sets its level, and in SpaceMap Go a\n  jolt plays or pauses the channel's trajectory. Each MUGIC moves its own object or channel\n  (MUGIC #1 \u2192 1); type another number next to the parameter to change it. Min and Max in a\n  row's settings set the range, in the parameter's own units (degrees, dB, %\u2026).\n- Only the chosen output sends. The MIDI mapping and both OSC mappings are kept side by\n  side, and presets and pieces save all three.\n- OSC goes out with every frame your MUGIC sends, so its rate is the MUGIC's streaming\n  rate (set in its firmware), just like MIDI. Values that haven't changed aren't sent again."
+    },
     {
       "version": "2.7.0",
       "date": "2026-10-24",
