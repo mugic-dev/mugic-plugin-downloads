@@ -1,6 +1,17 @@
 {
-  "latest": "2.6.0",
+  "latest": "2.7.0",
   "versions": [
+    {
+      "version": "2.7.0",
+      "date": "2026-10-24",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.7.0/MUGIC-MOTION-2.7.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.7.0/MUGIC-MOTION-2.7.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.7.0/MUGIC-MOTION-2.7.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.7.0/MUGIC-MOTION-2.7.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.7.0/macos.html",
+      "windowsGuide": "guides/2.7.0/windows.html",
+      "notes": "**Changed**\n\n- **No more wrap around by default.** Yaw, pitch and roll now stay within one turn: past\n  180\u00b0 they come back in from the other end, instead of counting on (190\u00b0, 360\u00b0\u2026) and\n  leaving the MIDI value stuck at 0 or 127 until you pressed Reset Wrap Around. If you\n  map a full turn (-180 to 180) and want to go past it without a jump, turn on\n  **Settings\u2026 > Wrap around**; the Calibrate tab's Reset Wrap Around button shows only\n  then."
+    },
     {
       "version": "2.6.0",
       "date": "2026-10-19",
