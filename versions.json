@@ -1,6 +1,17 @@
 {
-  "latest": "2.8.1",
+  "latest": "2.9.0",
   "versions": [
+    {
+      "version": "2.9.0",
+      "date": "2026-10-25",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.9.0/MUGIC-MOTION-2.9.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.9.0/MUGIC-MOTION-2.9.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.9.0/MUGIC-MOTION-2.9.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.9.0/MUGIC-MOTION-2.9.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.9.0/macos.html",
+      "windowsGuide": "guides/2.9.0/windows.html",
+      "notes": "**New**\n\n- **Works with VoiceOver.** Every control now says what it is and which signal it belongs to\n  (\"Mode for yaw angle: Continuous\", \"Assign pitch speed\"), the tabs say which one is open, and\n  each signal's live level can be read. VoiceOver also speaks what used to show only on screen:\n  a device connecting or dropping out, each calibration's instructions and its result, and\n  buttons like Reset Orientation. Tooltips are read as each control's hint, and popups can be\n  closed with Escape.\n- **Clearer for colour blindness.** Yaw, pitch and roll, the battery, and MIDI ON/OFF now use a\n  colour-blind-safe palette (MIDI ON is blue, OFF is orange), and a device's dot is filled when\n  connected and an empty ring when not, so no state depends on colour alone.\n- **LEARN is now ASSIGN** (ASSIGNING\u2026 while it's on): it does the same thing, sending only\n  that row so your DAW's MIDI Learn picks it up.\n- **Wider Out menu**, so a port like *IAC Driver Bus 1* is no longer cut off.\n- **Start new devices Unassigned** (Menu \u2192 Settings, off by default): a device you add, or the\n  one whose preset you delete, starts with nothing assigned instead of the Default map, so you\n  build your mapping from a blank slate. Your choice is remembered for every project.\n- **Follows Increase Contrast.** With *Increase contrast* on (System Settings \u2192 Accessibility \u2192\n  Display), labels, hints and borders are brighter. On Windows, contrast themes are honoured."
+    },
     {
       "version": "2.8.1",
       "date": "2026-10-24",
