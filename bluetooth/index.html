@@ -32,6 +32,18 @@
   h1 { font-size:1.9rem; margin:0 0 6px; letter-spacing:-0.02em; }
   h1 .reg { font-size:0.6em; vertical-align:super; }
   .tag { color:var(--muted); margin:0; }
+  .news {
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-top:20px; padding:14px 18px;
+    border-radius:12px; text-decoration:none; color:#ffffff; font-weight:500;
+    background:linear-gradient(135deg, #1f6feb 0%, #7c3aed 100%);
+    box-shadow:0 6px 18px rgba(124,58,237,.35); transition:transform .15s, box-shadow .15s;
+  }
+  .news:hover { transform:translateY(-1px); box-shadow:0 8px 22px rgba(124,58,237,.5); }
+  .news strong {
+    background:#ffd60a; color:#17181c; padding:4px 10px; border-radius:999px;
+    font-weight:800; letter-spacing:0.02em;
+  }
+  .news.wizard { background:linear-gradient(135deg, #e5484d 0%, #f5a524 30%, #30a46c 55%, #1f6feb 80%, #7c3aed 100%); }
   .back { display:inline-block; margin-bottom:18px; color:var(--accent); text-decoration:none; font-size:0.9rem; }
   .back:hover { text-decoration:underline; }
   .card {
@@ -87,6 +99,7 @@
     <a class="back" href="../">&larr; MUGIC MOTION plug-in downloads</a>
     <h1>MUGIC<span class="reg">®</span> Bluetooth</h1>
     <p class="tag">Your MUGIC's motion data over Bluetooth, sent on as UDP to the MUGIC MOTION plug-in, Max or Ableton — no Wi-Fi to set up.</p>
+    <a class="news wizard" href="../wizard/"><strong>NEW: MUGIC Wizard</strong> Set up your MUGIC step by step: Wi-Fi, Bluetooth or USB, no typing IP addresses. Download &rarr;</a>
   </header>
 
   <div id="latest"><p class="msg">Loading downloads…</p></div>
