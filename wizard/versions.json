@@ -1,4 +1,16 @@
 {
-  "latest": "",
-  "versions": []
+  "latest": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-30",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.0.0/MUGIC-Wizard-1.0.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.0.0/MUGIC-Wizard-1.0.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.0.0/MUGIC-Wizard-1.0.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.0.0/MUGIC-Wizard-1.0.0-WINDOWS-README.md",
+      "macosGuide": "guides/1.0.0/macos.html",
+      "windowsGuide": "guides/1.0.0/windows.html",
+      "notes": "**New**\n\n- **MUGIC Wizard** sets up your MUGIC step by step over Bluetooth: no web page, no typing an IP\n  address. Turn your MUGIC on, press **Power + Mode**, and pick it from the list.\n- **Firmware check.** The wizard tells you when your MUGIC's firmware is out of date and opens the\n  update page for you.\n- **Choose how MUGIC sends its data:** Wi-Fi on your network, Wi-Fi on MUGIC's own network,\n  Bluetooth, or USB cable.\n- **Your network, filled in.** The wizard knows which Wi-Fi network this computer is on, lists the\n  networks your MUGIC can see, and can use the password already saved on this computer, so you\n  rarely type anything. It sets this computer as the destination automatically.\n- **Checked, not guessed.** The wizard waits until data actually arrives on this computer, and when\n  something goes wrong it says what: wrong password, network not found, or a network that blocks\n  devices from talking to each other (common at schools, offices and on guest Wi-Fi).\n- **Advanced** settings for ports and other computers MUGIC also sends to.\n- **Main Menu \u2192 Show log file / Clear log** for troubleshooting.\n- Works best with MUGIC firmware 2.3.0 or later; older firmware works with fewer features."
+    }
+  ]
 }

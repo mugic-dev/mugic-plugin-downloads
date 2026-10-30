@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installing MUGIC Wizard 1.0.0 on macOS</title>
+<meta name="description" content="Installing MUGIC Wizard 1.0.0 on macOS.">
+<style>
+  :root {
+    --bg:#f7f7f5; --card:#ffffff; --fg:#17181c; --muted:#5f6470;
+    --line:#e3e4e8; --accent:#1f6feb; --soft:#f0f1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+      --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#14151a; --card:#1c1e25; --fg:#e9eaee; --muted:#9ba1ae;
+    --line:#2b2e37; --accent:#5b9dff; --soft:#23262f;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 80px; }
+  .back {
+    display:inline-block; color:var(--muted); text-decoration:none;
+    font-size:0.9rem; margin-bottom:26px;
+  }
+  .back:hover { color:var(--accent); }
+  .doc { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:34px; }
+  h1 { font-size:1.7rem; margin:0 0 22px; letter-spacing:-0.02em; line-height:1.25; }
+  h2 { font-size:1.2rem; margin:34px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:1rem; margin:26px 0 10px; }
+  h2:first-of-type { margin-top:24px; }
+  p, li { overflow-wrap:break-word; }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  code { background:var(--soft); padding:2px 6px; border-radius:5px; font-size:0.88em; }
+  pre {
+    background:var(--soft); padding:14px 16px; border-radius:10px;
+    overflow-x:auto; border:1px solid var(--line);
+  }
+  pre code { background:none; padding:0; font-size:0.85rem; line-height:1.5; }
+  blockquote {
+    margin:18px 0; padding:2px 18px; border-left:3px solid var(--accent);
+    color:var(--muted); background:var(--soft); border-radius:0 8px 8px 0;
+  }
+  blockquote p { margin:12px 0; }
+  table { border-collapse:collapse; width:100%; margin:18px 0; font-size:0.94rem; }
+  th, td { border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; }
+  .tablewrap { overflow-x:auto; }
+  .ver { color:var(--muted); font-size:0.85rem; margin:26px 0 0; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../../">&larr; All downloads</a>
+  <article class="doc">
+    <h1>MUGIC Wizard — macOS</h1>
+    <p><strong>Version 1.0.0 · macOS 11 Big Sur or later · Intel and Apple Silicon</strong></p>
+    <p>MUGIC Wizard sets up your MUGIC over Bluetooth, step by step: it checks the firmware, lets you pick
+    how MUGIC sends its data, fills in your Wi-Fi network for you, and finishes when data actually
+    arrives on this computer.</p>
+    <p>The download is <strong><code>MUGIC-Wizard-1.0.0-universal.pkg</code></strong>.</p>
+    <hr />
+    <h2>1. Install</h2>
+    <p>Double-click <strong><code>MUGIC-Wizard-1.0.0-universal.pkg</code></strong> and follow the installer. It puts
+    <strong>MUGIC Wizard</strong> in your <strong>Applications</strong> folder.</p>
+    <p>The wizard asks for three things the first time it needs them. Each one is optional, but saves you
+    typing:</p>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>macOS asks</th>
+    <th>Why</th>
+    <th>If you said no</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Bluetooth</strong></td>
+    <td>to talk to your MUGIC</td>
+    <td>the wizard can't work; turn it on in <em>System Settings → Privacy &amp; Security → Bluetooth</em></td>
+    </tr>
+    <tr>
+    <td><strong>Location</strong></td>
+    <td>macOS only shows an app the Wi-Fi network's name if it may use Location. The wizard doesn't use where you are.</td>
+    <td>type the network name yourself, or turn it on in <em>System Settings → Privacy &amp; Security → Location Services</em></td>
+    </tr>
+    <tr>
+    <td><strong>Keychain</strong> (your Mac's name and password), when you click <strong>Use the password saved on this Mac</strong></td>
+    <td>to read this network's saved Wi-Fi password</td>
+    <td>type the password yourself</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>For the keychain, <strong>Always Allow</strong> means the wizard won't ask again for that network; <strong>Allow</strong>
+    asks next time. The password goes only to your MUGIC: the wizard doesn't keep it.</p>
+    <h2>2. Connect</h2>
+    <p>Turn your MUGIC on, keep it close, and press <strong>Power + Mode</strong> together, briefly. In Wi-Fi modes
+    MUGIC only turns Bluetooth on when asked, to save battery; its LED blinks while Bluetooth is on. A
+    MUGIC already in Bluetooth mode is always visible and needs no buttons. Pick your MUGIC in the list.</p>
+    <p>If the firmware is older than <strong>2.3.0</strong>, the wizard offers to open the
+    <a href="https://mugic-dev.github.io/flash-firmware/">MUGIC firmware page</a>. You can skip it: the wizard
+    still works, with fewer features (it can't list the networks MUGIC sees or say why joining failed).</p>
+    <h2>3. Choose how MUGIC sends its data</h2>
+    <div class="tablewrap"><table>
+    <thead>
+    <tr>
+    <th>Choice</th>
+    <th>When to use it</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><strong>Wi-Fi: join your network</strong></td>
+    <td>MUGIC joins the same Wi-Fi as this computer. Up to 8 computers.</td>
+    </tr>
+    <tr>
+    <td><strong>Wi-Fi: MUGIC's own network</strong></td>
+    <td>Your computer joins a network made by MUGIC. Good on stage, at school or at work. Up to 4 computers.</td>
+    </tr>
+    <tr>
+    <td><strong>Bluetooth</strong></td>
+    <td>No Wi-Fi needed. Use <strong>MUGIC Bluetooth</strong> on this computer to receive it.</td>
+    </tr>
+    <tr>
+    <td><strong>USB</strong></td>
+    <td>For troubleshooting, or where wireless can't reach.</td>
+    </tr>
+    </tbody>
+    </table></div>
+    <p>The wizard fills in what it can (this computer's network and address), checks each step, and ends
+    on a screen that shows data arriving.</p>
+    <h2>If something doesn't work</h2>
+    <ul>
+    <li><strong>Your MUGIC doesn't appear</strong> — press <strong>Power + Mode</strong> again (Bluetooth turns off after a minute
+      without a connection), keep it close, and close other apps or web pages connected to it (MUGIC
+      Bluetooth, the BLE configurator).</li>
+    <li><strong>A message about Bluetooth at the top</strong> — Bluetooth is off: turn it on in <em>System Settings → Bluetooth</em>.</li>
+    <li><strong>"MUGIC couldn't find" your network</strong> — MUGIC only uses <strong>2.4 GHz</strong> Wi-Fi. Many routers have a
+      separate 2.4 GHz network name; pick that one.</li>
+    <li><strong>"MUGIC couldn't join"</strong> — usually the password. Check it in the Wi-Fi menu (top right of the screen) and try again.</li>
+    <li><strong>MUGIC joined, but no data arrives</strong> — school, office and guest networks often block devices from
+      talking to each other. Use <strong>MUGIC's own network</strong> instead.</li>
+    <li><strong>Main Menu → Show log file</strong> opens the wizard's log (<code>~/Library/Logs/MUGIC MOTION/mugic-wizard.log</code>); send it to us with your question.
+      <strong>Clear log</strong> empties it before you try again.</li>
+    </ul>
+  </article>
+  <p class="ver">MUGIC Wizard 1.0.0 &middot; macOS install guide</p>
+</div>
+</body>
+</html>
