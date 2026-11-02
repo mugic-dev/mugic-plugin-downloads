@@ -1,6 +1,17 @@
 {
-  "latest": "1.0.0",
+  "latest": "1.1.0",
   "versions": [
+    {
+      "version": "1.1.0",
+      "date": "2026-11-02",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.0/MUGIC-Wizard-1.1.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.0/MUGIC-Wizard-1.1.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.0/MUGIC-Wizard-1.1.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.0/MUGIC-Wizard-1.1.0-WINDOWS-README.md",
+      "macosGuide": "guides/1.1.0/macos.html",
+      "windowsGuide": "guides/1.1.0/windows.html",
+      "notes": "**New**\n\n- **Switch modes without setting up again.** On the \"How should MUGIC send its data?\" page, a mode\n  MUGIC already has settings for offers **Switch to this mode** (no typing: it uses the saved\n  network and password, then checks that data arrives) or **Reconfigure**. A mode never set up\n  offers **Configure new mode**. The current mode offers **Check it works**.\n  For your network, the card shows the saved network's name (**Switch to 'HomeNet'**) and warns\n  when this computer is on a different network, making **Reconfigure** the main button.\n- **USB is checked too.** After switching MUGIC to USB, the wizard reads its data over the cable and\n  shows live motion, like the other modes. A cable that only charges is caught: the wizard says to\n  use a data cable. For Max and other apps, it names MUGIC's USB port and speed (74880 baud).\n- **MUGIC's colours.** Each mode shows the colour of MUGIC's light: purple for your network, blue\n  for MUGIC's own network, green for Bluetooth, yellow for USB.\n- **Without the app: using MUGIC's buttons** explains how to change modes with the Mode and\n  Power buttons, and what each light colour means.\n\n**Improved**\n\n- **The network list stays.** Going back after a failed try shows the Wi-Fi networks again, with\n  your last choice selected, instead of an empty box. If MUGIC can't be reached, the wizard asks you\n  to press **Power + Mode** and refreshes the list by itself; **Refresh list** scans again.\n- **This computer's networks too.** The list adds the networks this computer sees, and marks\n  5 GHz-only ones \"MUGIC can't use it\" (MUGIC needs 2.4 GHz), so a 5 GHz network can't be picked by\n  mistake.\n- **Typing suggests.** Typing a network name filters the list as you type; click a match to use it.\n- **Always a next step.** When setup fails, the main button says what to do: **Try again: choose the\n  network**, **Re-enter the password**, or **Use MUGIC's own network**, with the likely cause in plain\n  words. While MUGIC joins, the wizard says what its light means: purple joined, yellow didn't.\n- **Advanced settings say what to do.** When MUGIC can't be reached (for example after switching it\n  to USB, which turns Bluetooth off), a big box asks you to press **Power + Mode** instead of a small\n  line at the bottom; the settings appear as soon as MUGIC answers.\n- **Waiting shows.** Scans and other waits show dots that grow every second.\n- **Easier to read.** Text grows as you enlarge the window, and grey text is brighter.\n- **USB cable tips.** After a firmware update the wizard says to unplug the cable and turn MUGIC on;\n  when MUGIC doesn't show up, it explains that a MUGIC turned off while plugged in only charges.\n- The **Main Menu** button is now just **Menu** (Show log file / Clear log): nothing there is part\n  of the setup."
+    },
     {
       "version": "1.0.0",
       "date": "2026-10-30",
