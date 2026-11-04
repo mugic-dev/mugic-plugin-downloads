@@ -1,6 +1,17 @@
 {
-  "latest": "1.1.1",
+  "latest": "1.1.3",
   "versions": [
+    {
+      "version": "1.1.3",
+      "date": "2026-11-04",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.3/MUGIC-Wizard-1.1.3-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.3/MUGIC-Wizard-1.1.3-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.3/MUGIC-Wizard-1.1.3-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.3/MUGIC-Wizard-1.1.3-WINDOWS-README.md",
+      "macosGuide": "guides/1.1.3/macos.html",
+      "windowsGuide": "guides/1.1.3/windows.html",
+      "notes": "**New**\n\n- **Works with MUGIC MOTION Plugin 2.10.0.** The plug-in's **Set up with MUGIC Wizard** pauses the plug-in while the Wizard runs. Choosing **MUGIC MOTION Plugin** at the end launches it and closes the Wizard, and the Wizard hands the setup (Bluetooth name or Wi-Fi port) back to the plug-in, which switches over by itself.\n- **Messages front and center.** They appear right under the page's text in a colour-blind-safe box, the same as in the plug-in, each with a mark: **!** something's wrong, **\u2192** your turn (a wait shows \". . .\"), **\u2713** it worked. MUGIC's light colours are unchanged.\n- \"Ready to set up\" shows a progress bar and the seconds left while MUGIC restarts and joins the network.\n- \"MUGIC is working\" shows the live motion in a green box, with what yaw, pitch and roll mean.\n- With USB, the Wizard explains that only one app at a time can use MUGIC's port (**Disconnect the wizard from the port**).\n- Each choice under \"Where do you want to use MUGIC?\" has an (i) saying what it does; the first is now **MUGIC MOTION Plugin**.\n- **Menu \u2192 Help** (\"MUGIC\u00ae Wizard: how it works\"): modes, buttons, light colours, common problems, Contact support, and **Show log file** / **Clear log**. Also **Start over** and the Wizard's version.\n- The top of each page says \"Your MUGIC name is: \u2026\", in larger type.\n\n**Fixed**\n\n- The Wizard said MUGIC's light turns yellow on its own network; it turns blue."
+    },
     {
       "version": "1.1.1",
       "date": "2026-11-02",

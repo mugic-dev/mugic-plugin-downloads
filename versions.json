@@ -1,6 +1,17 @@
 {
-  "latest": "2.9.0",
+  "latest": "2.10.0",
   "versions": [
+    {
+      "version": "2.10.0",
+      "date": "2026-11-04",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.10.0/MUGIC-MOTION-2.10.0-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.10.0/MUGIC-MOTION-2.10.0-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.10.0/MUGIC-MOTION-2.10.0-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.10.0/MUGIC-MOTION-2.10.0-WINDOWS-README.md",
+      "macosGuide": "guides/2.10.0/macos.html",
+      "windowsGuide": "guides/2.10.0/windows.html",
+      "notes": "**New**\n\n- **Works with MUGIC Wizard 1.1.3.** **Set up with MUGIC Wizard** replaces the old Wi-Fi settings link (under the header when there's no data, on the DEVICE tab and in Help). It launches the Wizard, or opens its download page. While the Wizard runs, the plug-in pauses (it stops listening and lets go of Bluetooth) and shows **Resume now**; when the Wizard closes, it picks up where it was. If you choose **MUGIC MOTION Plugin** in the Wizard, the Wizard tells the plug-in how it set MUGIC up (Bluetooth name or Wi-Fi port) and the plug-in switches your selected device to it. In a DAW, it points you to the MUGIC Bluetooth app. (Not on iPad.)\n- **Status front and center.** Messages that need you appear right under the header, in larger bold text, in a colour-blind-safe box with a symbol: **red !** something's wrong (e.g. \"No data from MUGIC #1\u2026\", a file that couldn't be saved, an OSC port clash), **blue** your turn or in progress (Connecting . . ., calibration countdown), **green \u2713** it worked (\"YAW calibrated: \u221280\u00b0 to 75\u00b0\", \"Piece saved.\").\n- **SpaceMap Go: a jolt hands the channel to its trajectory.** While a trajectory plays, MUGIC's other rows for that channel go quiet (greyed out, settings kept); the next jolt pauses it and they send again.\n- **MIDI ON / OSC ON** is green when on and grey when off.\n- **Help** is easier to scan: the three setup steps first, a sentence then bullets per section, new **Pieces** and **Standalone app** / **In a DAW** sections, support and log buttons at the bottom, softer text.\n- Tooltips on **Out**, **Ch**, the **Preset** menu, **Calibrate YAW / PITCH / ROLL**, every Reset button (even greyed out), **Clear log** and every Main Menu item.\n- **Open Bluetooth settings** link when macOS hasn't allowed Bluetooth yet.\n- Wider, light-blue scrollbars, easier to see and grab.\n- Renamed: tabs are **MAP MIDI**, **MAP ADM-OSC**, **MAP SPACEMAP**; **Create new preset from current\u2026**; in the standalone app, **Save / Load standalone app current state\u2026**. **Help\u2026** is first in the Main Menu, the version last.\n\n**Fixed**\n\n- The window opens tall enough (480) to show the whole Main Menu, and a saved larger size is used again.\n- Long tooltips near the top of the window were cut off; they now open below the control.\n- The Bluetooth device menu's **No MUGIC nearby** was cut off.\n- \"Bluetooth is starting . . .\" is blue, not red.\n- Cancelling **Export as a piece\u2026** or **Export current preset\u2026** no longer says the file couldn't be saved."
+    },
     {
       "version": "2.9.0",
       "date": "2026-10-25",
