@@ -1,6 +1,17 @@
 {
-  "latest": "1.1.0",
+  "latest": "1.1.1",
   "versions": [
+    {
+      "version": "1.1.1",
+      "date": "2026-11-02",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.1/MUGIC-Wizard-1.1.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.1/MUGIC-Wizard-1.1.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.1/MUGIC-Wizard-1.1.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.1.1/MUGIC-Wizard-1.1.1-WINDOWS-README.md",
+      "macosGuide": "guides/1.1.1/macos.html",
+      "windowsGuide": "guides/1.1.1/windows.html",
+      "notes": "**Fixed**\n\n- The wizard could quit on the \"Which Wi-Fi network?\" page when MUGIC finished listing the\n  networks it sees."
+    },
     {
       "version": "1.1.0",
       "date": "2026-11-02",
