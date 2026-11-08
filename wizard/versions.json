@@ -1,6 +1,17 @@
 {
-  "latest": "1.1.3",
+  "latest": "1.2.1",
   "versions": [
+    {
+      "version": "1.2.1",
+      "date": "2026-11-08",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.2.1/MUGIC-Wizard-1.2.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.2.1/MUGIC-Wizard-1.2.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.2.1/MUGIC-Wizard-1.2.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/wizard-v1.2.1/MUGIC-Wizard-1.2.1-WINDOWS-README.md",
+      "macosGuide": "guides/1.2.1/macos.html",
+      "windowsGuide": "guides/1.2.1/windows.html",
+      "notes": "**New**\n\n- **Update MUGIC's firmware over Wi-Fi**, no cable needed. When a newer firmware is available, choose\n  **Update over Wi-Fi**: the wizard downloads it at once, then installs it as soon as MUGIC is on Wi-Fi\n  (your network or MUGIC's own), in about a minute, and checks that MUGIC comes back. If anything goes\n  wrong, MUGIC keeps the firmware it has. A USB cable still works too (**Use a USB cable instead**).\n- The firmware page lists what's new in every version since the one your MUGIC runs, in a box you can\n  scroll.\n\n**Fixed**\n\n- With several MUGICs nearby, the list on the first page no longer keeps reordering itself: each MUGIC\n  keeps its place, and new ones are added at the bottom. The signal strength (Strong, Good, Weak) no\n  longer flickers either.\n- Updating over Wi-Fi: the progress no longer sits at 100% with nothing happening. Once the firmware has\n  left this computer, the page shows how long MUGIC has been installing it, and the wizard checks MUGIC's\n  version itself, so it reports success even if MUGIC restarts into the new firmware before answering\n  (it used to stay on \"Sending\" after a successful update).\n- Updating over Wi-Fi on a Mac: the wizard now asks for the Local Network permission it needs to reach\n  MUGIC. Without it the update could fail at once, and the wizard then wrongly said MUGIC ran the new\n  firmware. It now reports success only once MUGIC itself names the new version, and says so when it\n  couldn't reach MUGIC or MUGIC came back on its old firmware.\n- With firmware older than 2.3.0, which can't report its version, the list of what's new now says why it\n  starts at the very first version.\n- After an update on MUGIC's own network, the wizard asks you to rejoin that network (MUGIC's restart\n  makes this computer leave it), so it can see that MUGIC is back.\n- The last page no longer says \"receiving MUGIC's data\" with frozen numbers once the data has stopped:\n  after 3 s it says so, in blue, and why when this computer has left MUGIC's network."
+    },
     {
       "version": "1.1.3",
       "date": "2026-11-04",

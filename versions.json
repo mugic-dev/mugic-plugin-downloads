@@ -1,6 +1,17 @@
 {
-  "latest": "2.10.0",
+  "latest": "2.12.1",
   "versions": [
+    {
+      "version": "2.12.1",
+      "date": "2026-11-08",
+      "macos": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.12.1/MUGIC-MOTION-2.12.1-universal.pkg",
+      "windows": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.12.1/MUGIC-MOTION-2.12.1-windows-x64.zip",
+      "macosReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.12.1/MUGIC-MOTION-2.12.1-MACOS-README.md",
+      "windowsReadme": "https://github.com/mugic-dev/mugic-plugin-downloads/releases/download/v2.12.1/MUGIC-MOTION-2.12.1-WINDOWS-README.md",
+      "macosGuide": "guides/2.12.1/macos.html",
+      "windowsGuide": "guides/2.12.1/windows.html",
+      "notes": "**New**\n\n- iPad: set up your MUGIC from inside the MUGIC MOTION app. In the DEVICE tab, tap **Set up MUGIC**: the same steps as the MUGIC Wizard on a computer (Wi-Fi on your network, MUGIC's own network, or Bluetooth), checked until MUGIC's data arrives. Tap **Done** and the selected device switches to the new setup.\n- On your network, this iPad's network is picked for you once you allow Location (the app only reads the network's name). For MUGIC's own network, tap Join when iPadOS asks.\n- Update MUGIC's firmware from the iPad, over Wi-Fi: the setup downloads it and installs it once MUGIC is on Wi-Fi, and lists what's new in every version since the one your MUGIC runs. Inside a host app such as Logic Pro or Loopy Pro, open the MUGIC MOTION app to set up MUGIC.\n- iPad: the MUGIC MOTION app can now receive MUGIC over Bluetooth. In the DEVICE tab, set Source to BLE and pick your MUGIC. It keeps streaming while another app is in front. (Inside a host app such as Logic Pro or Loopy Pro, use Wi-Fi.)\n\n**Fixed**\n\n- iPad, Set up MUGIC: with several MUGICs nearby, the list no longer keeps reordering itself, and the signal strength no longer flickers.\n- iPad, firmware update over Wi-Fi: no more 100% with nothing happening. The setup shows how long MUGIC has been installing, and checks MUGIC's version itself to confirm the update (it could stay on \"Sending\" after a successful update).\n- iPad: after a firmware update on MUGIC's own network, the setup joins that network again by itself (the restart makes the iPad leave it), so it sees MUGIC come back.\n- iPad, Set up MUGIC: the last page no longer shows \"receiving MUGIC's data\" with frozen numbers once the data has stopped; it says so, and tells you to rejoin MUGIC's network when the iPad has left it.\n- iPad: **Show log file** in the DEVICE tab now opens the share sheet, so you can send the log by AirDrop or Mail, or save it to Files.\n- iPad: settings changed in the MUGIC MOTION app (such as a MUGIC's Source set to BLE) are no longer lost when iPadOS closes the app in the background."
+    },
     {
       "version": "2.10.0",
       "date": "2026-11-04",
